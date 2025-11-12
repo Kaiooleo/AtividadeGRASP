@@ -14,11 +14,19 @@ public class Produto {
 
     private String nome;
     private double preco;
+    private long id;
     
-    //construtor
-    public Produto(String nome, double preco){
+    //construtores
+    
+    //construtor padrão
+    public Produto(){
+     //vazio 
+    }
+    
+    public Produto(String nome, double preco, long id){
      this.nome = nome;
      this.preco = preco;
+     this.id = id;
     }
     
     //Getters e Setters
@@ -30,11 +38,19 @@ public class Produto {
         return preco;
     }
     
+    public long getId() {
+        return id;
+    }
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
     
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+    
+     public void setId(long id) {
+        this.id = id;
     }
 }
