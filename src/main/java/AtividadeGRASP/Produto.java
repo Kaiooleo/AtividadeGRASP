@@ -1,20 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package AtividadeGRASP;
-
-/**
- *
- * @author leona
- */
 
 //classe produto e seus atributos, nome e preço
 public class Produto {
 
     private String nome;
     private double preco;
-    private long id;
+    private int id;
     
     //construtores
     
@@ -23,7 +14,7 @@ public class Produto {
      //vazio 
     }
     
-    public Produto(String nome, double preco, long id){
+    public Produto(String nome, double preco, int id){
      this.nome = nome;
      this.preco = preco;
      this.id = id;
@@ -50,7 +41,13 @@ public class Produto {
         this.preco = preco;
     }
     
-     public void setId(long id) {
+     public void setId(int id) {
         this.id = id;
     }
+     
+    @Override
+    public String toString() {
+        return "ID: " + id + " | Nome: " + nome + " | Preço: R$ " + String.format("%.2f", preco);
+    }
+     
 }
