@@ -44,7 +44,7 @@ public class Produto {
      public void setId(int id) {
         this.id = id;
     }
-     
+    // Exibe as informções de forma mais organizada no terminal.
     @Override
     public String toString() {
         return "ID: " + id + " | Nome: " + nome + " | Preço: R$ " + String.format("%.2f", preco);

@@ -3,6 +3,8 @@ package AtividadeGRASP;
 import java.util.List;
 import java.util.Scanner;
 
+// Classe principal responsável apenas pelas interações do usário, a interface.
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +23,7 @@ public class Main {
             
             switch (opcao) {
                 case "1":
-                    // cadastrar
+                    // cadastrar produtos
                     System.out.print("Nome do produto: ");
                     String nome = scanner.nextLine().trim();
 
@@ -35,12 +37,13 @@ public class Main {
                         break;
                     }
 
+                    // chama o controller, passando a responsabilidade para ele.
                     controller.adicionarProduto(nome, preco); // Controller -> Creator
                     System.out.println("Produto cadastrado com sucesso!");
                     break;
 
                 case "2":
-                    // listar
+                    // listar produtos
                     List<Produto> lista = controller.listarProdutos();
                     if (lista.isEmpty()) {
                         System.out.println("Nenhum produto cadastrado.");
