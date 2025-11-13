@@ -1,6 +1,6 @@
 package AtividadeGRASP;
 
-//classe produto e seus atributos, nome e preço
+//classe produto e seus atributos, nome, preço e id
 public class Produto {
 
     private String nome;
